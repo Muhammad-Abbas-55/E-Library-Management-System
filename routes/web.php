@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
+// Raja
 Route::get('/', function () {
     return view('welcome');
 });
