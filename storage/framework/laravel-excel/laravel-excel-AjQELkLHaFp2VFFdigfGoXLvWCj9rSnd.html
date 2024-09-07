@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Books</title>
+    
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="http://127.0.0.1:8000/dist/css/skins/_all-skins.min.css">
+
+  <link rel="stylesheet" href="http://127.0.0.1:8000/assets/css/jquery.dataTables.min.css">
+  
+  <link rel="stylesheet" href="http://127.0.0.1:8000/assets/css/sweetalert.css">
+
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+  </head>
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <header class="main-header" >
+
+<style>
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 17px;
+  }
+
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+  #customers tr:hover {background-color: #ddd;}
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 6px 18px;
+    border-radius: 4%;
+    float:center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 4px;
+    cursor: pointer;
+  }
+
+  .button2 {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */ 
+  .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+  .button5 {background-color: #555555;} /* Black */
+
+
+/* store */
+
+  * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+    <!-- Logo -->
+    <a href="http://127.0.0.1:8000/dashboard" class="logo" style="background:  #388800">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>L</b>D</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>D</b>ashboard</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" style="background: green">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav" >
+        <li class="dropdown user user-menu">
+        
+          </li>
+
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="http://127.0.0.1:8000/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs" >Libraian Profile | Admin</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header" style="background: green">
+                <img src="http://127.0.0.1:8000/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                Admin</br> UOBS Librarian
+                  <small>Member since Oct. 2020</small>
+                </p>
+              </li>
+            
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="http://127.0.0.1:8000/user/profile" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                <form method="POST" action="http://127.0.0.1:8000/logout" >
+                   <input type="hidden" name="_token" value="J7JJnL2JVxQFsUdrRKEtXhAg1XvDWvayD0NrIhO2">                    <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out btn btn-default btn-flat" href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+                       this.closest('form').submit();">
+    Logout
+</a>
+ 
+                </form>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+ <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" class="small-box bg-green">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="http://127.0.0.1:8000/dist/img/uobs.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>UOBS E-Library</p>
+          <a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-circle text-success"></i>Welcome</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree" style="overflow-y:auto;">
+        <li class="header">MAIN NAVIGATION</li>
+
+<!-- Dashboard -->
+        <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-dashboard text-aqua"></i> <span>Dashboard</span></a></li>
+
+ <!-- Books href="http://127.0.0.1:8000/add-section">  -->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-list text-aqua"></i> <span>Books</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/book_create"><i class="fa fa-circle-o"></i> Add Book </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/book_index"><i class="fa fa-circle-o"></i> List Books </a></li>
+          </ul>
+        </li>
+
+
+  <!-- Authers --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users text-aqua"></i> <span>Authors</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/author_create"><i class="fa fa-circle-o"></i> Add Author </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/author_index"><i class="fa fa-circle-o"></i> View Authors </a></li>
+          </ul>
+        </li>
+  <!-- Shelf --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users text-aqua"></i> <span>Shelf</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/shelf_create"><i class="fa fa-circle-o"></i> Add Shelves </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/shelf_index"><i class="fa fa-circle-o"></i> View Shelves </a></li>
+          </ul>
+        </li>
+
+
+         <!-- Categories --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Book Categories</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/category_create"><i class="fa fa-circle-o"></i> Add Categories </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/category_index"><i class="fa fa-circle-o"></i> List Categories </a></li>
+          </ul>
+      </li>
+
+
+     <!-- Publisher --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Book Publisher</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/publisher_index"><i class="fa fa-circle-o"></i> Add Publisher </a></li>>
+          </ul>
+      </li>  
+
+          <!-- Book Isssue --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Book Issue</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/bookissue_create"><i class="fa fa-circle-o"></i> Issue Books</a></li>
+            <li class=""><a href="http://127.0.0.1:8000/bookissue_index"><i class="fa fa-circle-o"></i> View Isssues Book </a></li>
+          </ul>
+
+      </li>
+
+     <!-- Book Return --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Book Return</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/bookreturn_create"><i class="fa fa-circle-o"></i> Return Books</a></li>
+            <li class=""><a href="http://127.0.0.1:8000/bookreturn_index"><i class="fa fa-circle-o"></i> View Return Book </a></li>
+          </ul>
+      </li>
+
+
+     <!-- Fine --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Fine Rules</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/fine_create"><i class="fa fa-circle-o"></i> Add Rules </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/fine_index"><i class="fa fa-circle-o"></i> View List </a></li>
+          </ul>
+      </li>
+
+
+      <!-- Student --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Student</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/student_create"><i class="fa fa-circle-o"></i> Add Student </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/student_index"><i class="fa fa-circle-o"></i> List Student </a></li>
+          </ul>
+      </li>
+
+      <!-- Staff --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>Staff</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/staff_create"><i class="fa fa-circle-o"></i> Add Staff </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/staff_index"><i class="fa fa-circle-o"></i> List Staff </a></li>
+          </ul>
+      </li>
+
+      <!-- E-book --> 
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user text-aqua"></i> <span>E-Book</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class=""><a href="http://127.0.0.1:8000/ebook_create"><i class="fa fa-circle-o"></i> Add E-Book </a></li>
+            <li class=""><a href="http://127.0.0.1:8000/ebook_index"><i class="fa fa-circle-o"></i> List E-Book </a></li>
+          </ul>
+      </li>
+
+
+           <!-- Report --> 
+
+        <li class="header">SUB NAVIGATION</li>
+        <li><a href="http://127.0.0.1:8000/report"><i class="fa fa-circle-o text-red"></i> <span>Report</span></a></li>
+
+
+        <!-- contact us -->
+        <li class="header">SUB NAVIGATION</li>
+        <li><a href="http://127.0.0.1:8000/contact_show"><i class="fa fa-circle-o text-red"></i> <span>Follow Us</span></a></li>
+
+        <li><a href="http://127.0.0.1:8000/news_index"><i class="fa fa-circle-o text-red"></i> <span>Library News & Events</a></li>
+        <li><a href="http://127.0.0.1:8000/about_index"><i class="fa fa-circle-o text-red"></i> <span>About Us</a></li>
+        <li><a href="http://127.0.0.1:8000/feedback_index"><i class="fa fa-circle-o text-red"></i> <span>Feedback</a></li>
+
+      
+
+        <!-- contact us -->
+      
+ 
+      </ul>
+    </section>
+  </aside>    
+       <div class="content-wrapper ">  
+           
+<section class="content-header">
+	<h1>
+		Books List
+		<small>Page</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-dashboard"></i>Home</a></li>
+		<li class="active">Dashboard</li>
+	</ol>
+</section></br>
+
+<div style="padding: 30px;">
+	
+	<div class="row">
+		<div class="col-md-7"> 
+			<a href="http://127.0.0.1:8000/book_create">
+				<button class="button button2" style="background-color: #008CBA; margin: 4px 2px; text-align: center; text-decoration: none; font-size: 15px; padding: 8px 3.5%; color: white; border-radius: 12%; border-radius: 1%;">Add New Book
+				</button>
+			</a>
+			<a href="http://127.0.0.1:8000/book_exportexcel">
+				<button class="button button2" style="background-color: #008CBA; margin: 4px 2px; text-align: center; text-decoration: none; font-size: 15px; padding: 8px 3.5%; color: white; border-radius: 12%; border-radius: 1%;">Export via Excel
+				</button>
+			</a>
+			<a href="http://127.0.0.1:8000/book_exportcsv">
+				<button class="button button2" style="background-color: #008CBA; margin: 4px 2px; text-align: center; text-decoration: none; font-size: 15px; padding: 8px 3.5%; color: white; border-radius: 12%; border-radius: 1%;">Export via CSV
+				</button>
+			</a>
+			<a href="http://127.0.0.1:8000/book_import">
+				<button class="button button2" style="background-color: #008CBA; margin: 4px 2px; text-align: center; text-decoration: none; font-size: 15px; padding: 8px 3.5%; color: white; border-radius: 12%; border-radius: 1%;">Import Books
+				</button>
+			</a>
+		</div>
+
+		<div class="col-md-12">		
+			<form class="example" action="http://127.0.0.1:8000/book_search" style="margin:auto;max-width:700px;margin-top: 10px;">
+		 		 <input type="text" placeholder="Search Books..." name="query">
+		 		 <button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12 text-center"> 
+
+
+			
+			
+						 
+			<br/>
+			<div class="table-responsive" style="overflow-x:auto;">
+				<table class="table" id="customers">
+					<tr>
+						<th>ID</th>
+						<th>Image</th>
+						<th>Book Title</th>
+						<th>Edition</th>
+						<th>Price</th>
+						<th>ISBN No</th>
+						<th>Serial No</th>
+						<!-- <th>Description</th> -->
+						<th>Book Length</th>
+						<th>Author Name</th>
+						<th>Book Category</th>
+						<th>Shelf No</th>
+						<th>Total Copies</th>
+						<th>Available Copies</th>
+						<th>Publisher Name</th>
+						<th>Publish Date</th>
+						<th>Publish Country</th>
+						<th>Action</th>
+					</tr>
+					
+
+					                       
+					<tr>
+						<td>1</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622018776book-media-grid-10.jpg" width="80px" height="80px"></td>
+						<td>Database</td>
+						<td>2nd</td>
+						<td>200$</td>
+						<td>ISBN 978-93-96055-02-6</td>
+						<td>
+							                               23454,<br>
+							                               32342,<br>
+							                               23234,<br>
+							
+						</td>
+						<!-- <td><textarea>This Book include all functionalities about database</textarea></td> -->
+						<td>478</td>
+					
+						<td>
+							                            	Dr Maqsood,<br>
+                                                        	Rafay Baloch,<br>
+                            						</td>
+					
+						<td>Computer Science</td>
+
+						<td>
+							                            	1,
+                            						</td>
+
+						<td>3</td>
+						<td>1</td>
+						<td>
+							                            	Pearson&#039;s,<br>
+                            						</td>
+						<td>2010-01-23</td>
+						<td>Pakistan</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/1">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/1/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/1">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>2</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622021334book-media-03.jpg" width="80px" height="80px"></td>
+						<td>Literature</td>
+						<td>1st</td>
+						<td>300$</td>
+						<td>4545-343-443-5</td>
+						<td>
+							                               6556,<br>
+							                               8765,<br>
+							
+						</td>
+						<!-- <td><textarea>All about Literature and linguistic.</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+							                            	Rafay Baloch,<br>
+                            						</td>
+					
+						<td>English</td>
+
+						<td>
+							                            	2,
+                            						</td>
+
+						<td>2</td>
+						<td>2</td>
+						<td>
+							                            	Mughal Publisher,<br>
+                            						</td>
+						<td>2012-04-05</td>
+						<td>India</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/2">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/2/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/2">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>3</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622021756book-media-grid-09.jpg" width="80px" height="80px"></td>
+						<td>Opreating System</td>
+						<td>2nd</td>
+						<td>50$</td>
+						<td>3432-342344-34-53</td>
+						<td>
+							                               54367,<br>
+							
+						</td>
+						<!-- <td><textarea>How the Operating System works.</textarea></td> -->
+						<td>543</td>
+					
+						<td>
+							                            	Dr Maqsood,<br>
+                                                        	Rafay Baloch,<br>
+                            						</td>
+					
+						<td>Computer Science</td>
+
+						<td>
+							                            	1,
+                                                        	2,
+                            						</td>
+
+						<td>1</td>
+						<td>1</td>
+						<td>
+							                            	Text Book Board,<br>
+                            						</td>
+						<td>2021-05-10</td>
+						<td>Australia</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/3">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/3/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/3">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>4</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622022018book-media-04.jpg" width="80px" height="80px"></td>
+						<td>Genetics</td>
+						<td>1st</td>
+						<td>65$</td>
+						<td>454-45453-454-45-3</td>
+						<td>
+							                               56366,<br>
+							                               56367,<br>
+							                               56768,<br>
+							                               56769,<br>
+							
+						</td>
+						<!-- <td><textarea>Human and Animal genetics information.</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+							                            	Dr Maqsood,<br>
+                                                        	Kivin Mitnik,<br>
+                            						</td>
+					
+						<td>Biology Science</td>
+
+						<td>
+							                            	2,
+                                                        	3,
+                            						</td>
+
+						<td>4</td>
+						<td>4</td>
+						<td>
+							                            	Dogar&#039;s Publisher,<br>
+                            						</td>
+						<td>2007-05-06</td>
+						<td>Austria</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/4">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/4/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/4">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>5</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622022620book-media-grid-01.jpg" width="80px" height="80px"></td>
+						<td>Algebra</td>
+						<td>1st</td>
+						<td>85$</td>
+						<td>543-4543-667-56-4</td>
+						<td>
+							                               45332,<br>
+							                               45333,<br>
+							
+						</td>
+						<!-- <td><textarea>Basic knowledge about algebra and how it works.</textarea></td> -->
+						<td>1254</td>
+					
+						<td>
+							                            	Irfan Raja,<br>
+                            						</td>
+					
+						<td>Mathematics</td>
+
+						<td>
+							                            	2,
+                            						</td>
+
+						<td>2</td>
+						<td>2</td>
+						<td>
+							                            	Pearson&#039;s,<br>
+                                                        	Mughal Publisher,<br>
+                            						</td>
+						<td>2009-05-19</td>
+						<td>America</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/5">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/5/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/5">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>6</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622116078b1.jpg" width="80px" height="80px"></td>
+						<td>Algebra</td>
+						<td>1st</td>
+						<td>90$</td>
+						<td>5343-45433-55454-4</td>
+						<td>
+							                               34654,<br>
+							
+						</td>
+						<!-- <td><textarea>sdfg</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+							                            	Dr Maqsood,<br>
+                                                        	Rafay Baloch,<br>
+                            						</td>
+					
+						<td>Mathematics</td>
+
+						<td>
+							                            	1,
+                                                        	2,
+                            						</td>
+
+						<td>1</td>
+						<td>1</td>
+						<td>
+							                            	Text Book Board,<br>
+                            						</td>
+						<td>2021-05-13</td>
+						<td>Germany</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/6">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/6/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/6">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>7</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622018776book-media-grid-10.jpg" width="80px" height="80px"></td>
+						<td>Database</td>
+						<td>2nd</td>
+						<td>200$</td>
+						<td>ISBN 978-93-96055-02-6</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>This Book include all functionalities about database</textarea></td> -->
+						<td>478</td>
+					
+						<td>
+													</td>
+					
+						<td>Computer Science</td>
+
+						<td>
+													</td>
+
+						<td>3</td>
+						<td>1</td>
+						<td>
+													</td>
+						<td>2010-01-23</td>
+						<td>Pakistan</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/7">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/7/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/7">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>8</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622021334book-media-03.jpg" width="80px" height="80px"></td>
+						<td>Literature</td>
+						<td>1st</td>
+						<td>300$</td>
+						<td>4545-343-443-5</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>All about Literature and linguistic.</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+													</td>
+					
+						<td>English</td>
+
+						<td>
+													</td>
+
+						<td>2</td>
+						<td>2</td>
+						<td>
+													</td>
+						<td>2012-04-05</td>
+						<td>India</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/8">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/8/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/8">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>9</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622021756book-media-grid-09.jpg" width="80px" height="80px"></td>
+						<td>Opreating System</td>
+						<td>2nd</td>
+						<td>50$</td>
+						<td>3432-342344-34-53</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>How the Operating System works.</textarea></td> -->
+						<td>543</td>
+					
+						<td>
+													</td>
+					
+						<td>Computer Science</td>
+
+						<td>
+													</td>
+
+						<td>1</td>
+						<td>1</td>
+						<td>
+													</td>
+						<td>2021-05-10</td>
+						<td>Australia</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/9">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/9/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/9">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>10</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622022018book-media-04.jpg" width="80px" height="80px"></td>
+						<td>Genetics</td>
+						<td>1st</td>
+						<td>65$</td>
+						<td>454-45453-454-45-3</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>Human and Animal genetics information.</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+													</td>
+					
+						<td>Biology Science</td>
+
+						<td>
+													</td>
+
+						<td>4</td>
+						<td>4</td>
+						<td>
+													</td>
+						<td>2007-05-06</td>
+						<td>Austria</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/10">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/10/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/10">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>11</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622022620book-media-grid-01.jpg" width="80px" height="80px"></td>
+						<td>Algebra</td>
+						<td>1st</td>
+						<td>85$</td>
+						<td>543-4543-667-56-4</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>Basic knowledge about algebra and how it works.</textarea></td> -->
+						<td>1254</td>
+					
+						<td>
+													</td>
+					
+						<td>Mathematics</td>
+
+						<td>
+													</td>
+
+						<td>2</td>
+						<td>2</td>
+						<td>
+													</td>
+						<td>2009-05-19</td>
+						<td>America</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/11">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/11/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/11">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+					                       
+					<tr>
+						<td>12</td>
+						<td><img src="http://127.0.0.1:8000/media/books/1622116078b1.jpg" width="80px" height="80px"></td>
+						<td>Algebra</td>
+						<td>1st</td>
+						<td>90$</td>
+						<td>5343-45433-55454-4</td>
+						<td>
+							
+						</td>
+						<!-- <td><textarea>sdfg</textarea></td> -->
+						<td>876</td>
+					
+						<td>
+													</td>
+					
+						<td>Mathematics</td>
+
+						<td>
+													</td>
+
+						<td>1</td>
+						<td>1</td>
+						<td>
+													</td>
+						<td>2021-05-13</td>
+						<td>Germany</td>
+						<td style="padding: 0%; width: 17%;">
+						<a href="book_show/12">
+							<button class="button button2"><i class="fa fa-eye" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px; border-radius: 100%" ></i></button>
+						</a>
+						<a href="book_edit/12/edit">
+							<button class="button button"><i class="fa fa-edit" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						<a href="book_delete/12">
+							<button class="button button3"><i class="fa fa-trash" style="font-size: 16px; padding: -5px -9px; margin: -2px -3px;" ></i></button>
+						</a>
+						</td>
+					</tr>
+									</table>
+			</div>			
+		</div>
+	</div>
+
+
+<br>
+<br>
+
+
+
+
+</div>
+       </div>
+      
+        
+        <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>E-Library</b> UOBS
+    </div>
+    <strong>Copyright &copy; 2020-2022 <a href="https://adminlte.io">UOBS Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+ 
+      
+      
+      <!-- Add the sidebar's background. This div must be placed
+          immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div>
+<!-- ./wrapper -->
+
+        <script src="http://127.0.0.1:8000/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="http://127.0.0.1:8000/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="http://127.0.0.1:8000/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="http://127.0.0.1:8000/dist/js/adminlte.min.js"></script>
+
+<script src="http://127.0.0.1:8000/assets/js/jquery.dataTables.min.js"></script>
+
+<script src="http://127.0.0.1:8000/assets/js/jquery.validate.js"></script>
+
+<script src="http://127.0.0.1:8000/assets/js/sweetalert.js"></script>
+
+<script src="http://127.0.0.1:8000/assets/js/custom-script.js"></script>
+
+
+  <script type="text/javascript">
+      $(".addRow").on("click",function(){
+        addRow();
+    });
+
+
+
+    function addRow()
+    {
+      var number = ($("#addRows tr").length - 0) + 1;
+      $("#addRows").append('<tr>'+
+      	         '<td>'+ number+'</td>'+
+                  '<td><input type="text" name="c_name[]" class="form-control"></td>'+
+
+                  '<td style="text-align: center"><a href="#" class="btn btn-danger remove">-</a></td>'+
+                  '</tr>');
+
+
+    }
+
+
+  $('tbody').on('click','.remove',function(){
+   
+   $(this).parent().parent().remove();
+
+  });
+
+</script>
+  <script type="text/javascript">
+      $(".addSerial").on("click",function(){
+        addSerial();
+    });
+
+
+
+
+
+    function addSerial()
+    {
+    	
+      var number = ($("#addSerials tr").length - 0) + 1;
+      $("#addSerials").append('<tr>'+
+      	         '<td>'+ number+'</td>'+
+                  '<td><input type="text" name="serial_no[]" class="form-control"></td>'+
+
+                  '<td style="text-align: center"><a href="#" class="btn btn-danger remove">-</a></td>'+
+                  '</tr>');
+
+
+    }
+
+
+  $('tbody').on('click','.remove',function(){
+   
+   $(this).parent().parent().remove();
+
+  });
+
+    
+
+  </script>
+
+
+        <!-- Java script -->
+   
+
+
+</body>
+</html>
